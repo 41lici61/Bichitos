@@ -1,0 +1,108 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Bichitos.ViewModels"
+        x:Class="Bichitos.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Bichitos"
+        Width="800" Height="450"
+        Icon="/Assets/avalonia-logo.ico">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <UserControl>
+    <UserControl.Styles>
+      
+      <!-- Fondo con estilo "Frutiger Aero": degradado brillante -->
+        <Style Selector="UserControl">
+          <Setter Property="Background">
+            <Setter.Value>
+              <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#A0EFFF" Offset="0"/>
+                <GradientStop Color="#FFFFFF" Offset="0.4"/>
+                <GradientStop Color="#9FFFB8" Offset="1"/>
+              </LinearGradientBrush>
+            </Setter.Value>
+          </Setter>
+        </Style>
+
+        <!-- Estilo infantil para botones -->
+        <Style Selector="Button">
+          <Setter Property="Background" Value="#FFCCFF"/>
+          <Setter Property="Foreground" Value="Black"/>
+          <Setter Property="CornerRadius" Value="12"/>
+          <Setter Property="FontSize" Value="16"/>
+          <Setter Property="Margin" Value="4"/>
+        </Style>
+
+        <!-- Caja con borde brillante -->
+        <Style Selector="TextBox, ComboBox, CalendarDatePicker, CheckBox">
+          <Setter Property="Margin" Value="4"/>
+          <Setter Property="FontSize" Value="14"/>
+        </Style>
+      </UserControl.Styles>
+
+      <DockPanel Margin="16">
+        <!-- Encabezado -->
+        <TextBlock Text="🌸 Creador de Bichitos 🌸"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Foreground="#0080FF"
+                   HorizontalAlignment="Center"
+                   DockPanel.Dock="Top"
+                   Margin="0,0,0,16"/>
+
+        <!-- Formulario -->
+        <StackPanel DockPanel.Dock="Top"
+                    Orientation="Vertical"
+                    Background="#80FFFFFF"
+                    Spacing="8">
+          
+          <TextBlock Text="Nombre del bichito:" FontWeight="Bold"/>
+          <TextBox Watermark="Escribe un nombre..." />
+
+          <CheckBox Content="¿Es mágico?" />
+
+          <TextBlock Text="Fecha de aparición:" FontWeight="Bold"/>
+          <CalendarDatePicker />
+
+          <TextBlock Text="Color principal:" FontWeight="Bold"/>
+          <ComboBox>
+            <ComboBoxItem Content="Verde"/>
+            <ComboBoxItem Content="Azul"/>
+            <ComboBoxItem Content="Rosa"/>
+            <ComboBoxItem Content="Amarillo"/>
+          </ComboBox>
+
+          <CheckBox Content="Opciones avanzadas" Name="ChkAvanzadas"/>
+
+          <!-- Aquí puedes ocultar/mostrar opciones avanzadas en C# -->
+          <StackPanel Name="OpcionesAvanzadasPanel" IsVisible="False">
+            <TextBlock Text="Nivel de rareza:" FontWeight="Bold"/>
+            <ComboBox>
+              <ComboBoxItem Content="Común"/>
+              <ComboBoxItem Content="Raro"/>
+              <ComboBoxItem Content="Legendario"/>
+            </ComboBox>
+          </StackPanel>
+
+          <Button Content="✨ Crear bichito ✨"
+                  HorizontalAlignment="Center"
+                  Width="160"/>
+        </StackPanel>
+
+        <!-- Lista de bichitos creados -->
+        <ScrollViewer Margin="0,16,0,0">
+          <WrapPanel Name="ListaBichitos" 
+                     Background="#66FFFFFF"
+                     Margin="12"/>
+        </ScrollViewer>
+      </DockPanel>
+    </UserControl>
+
+
+
+</Window>

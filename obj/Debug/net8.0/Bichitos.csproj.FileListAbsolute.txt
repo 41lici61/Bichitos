@@ -74,3 +74,5 @@ C:\Users\34672\RiderProjects\Bichitos\obj\Debug\net8.0\Bichitos.pdb
 C:\Users\34672\RiderProjects\Bichitos\obj\Debug\net8.0\Bichitos.genruntimeconfig.cache
 C:\Users\34672\RiderProjects\Bichitos\obj\Debug\net8.0\ref\Bichitos.dll
 C:\Users\34672\RiderProjects\Bichitos\obj\Debug\net8.0\Bichitos.sourcelink.json
+C:\Users\34672\RiderProjects\Bichitos\bin\Debug\net8.0\Avalonia.Xaml.Interactions.dll
+C:\Users\34672\RiderProjects\Bichitos\bin\Debug\net8.0\Avalonia.Xaml.Interactivity.dll

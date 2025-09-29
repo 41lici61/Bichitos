@@ -13,6 +13,8 @@
           "Avalonia.Diagnostics": "11.3.6",
           "Avalonia.Fonts.Inter": "11.3.6",
           "Avalonia.Themes.Fluent": "11.3.6",
+          "Avalonia.Xaml.Interactions": "11.3.0.6",
+          "Avalonia.Xaml.Interactivity": "11.3.0.6",
           "CommunityToolkit.Mvvm": "8.2.1"
         },
         "runtime": {
@@ -246,6 +248,29 @@
           "lib/net8.0/Avalonia.X11.dll": {
             "assemblyVersion": "11.3.6.0",
             "fileVersion": "11.3.6.0"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactions/11.3.0.6": {
+        "dependencies": {
+          "Avalonia": "11.3.6",
+          "Avalonia.Xaml.Interactivity": "11.3.0.6"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactions.dll": {
+            "assemblyVersion": "11.3.0.6",
+            "fileVersion": "11.3.0.6"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactivity/11.3.0.6": {
+        "dependencies": {
+          "Avalonia": "11.3.6"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactivity.dll": {
+            "assemblyVersion": "11.3.0.6",
+            "fileVersion": "11.3.0.6"
           }
         }
       },
@@ -564,6 +589,20 @@
       "sha512": "sha512-6NKE1py4zbkMJg++2rMJHyjEXNo2JU0Nj9nEMnXh2gyHyfclhULIGIqmpsLvJ7Ljv1+6iLDqArCFRn+mi1hANw==",
       "path": "avalonia.x11/11.3.6",
       "hashPath": "avalonia.x11.11.3.6.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactions/11.3.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-87YePbXtmACZb/OrH9OpHlXdKQ0VYRZC1UzoUo4vsqp0593bOtmhp3GnVsyJXYJuaNG6+qDY6EWssYVV2Wqegg==",
+      "path": "avalonia.xaml.interactions/11.3.0.6",
+      "hashPath": "avalonia.xaml.interactions.11.3.0.6.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactivity/11.3.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G5zKVK44HjaSXm+DHDukYa04NltlrV9adKAzIwxItcQVVtkqxXBWXv3829xqBc4Ulbt/qbq59qRD4aOxSPWP4Q==",
+      "path": "avalonia.xaml.interactivity/11.3.0.6",
+      "hashPath": "avalonia.xaml.interactivity.11.3.0.6.nupkg.sha512"
     },
     "CommunityToolkit.Mvvm/8.2.1": {
       "type": "package",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bichitos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2dca75729333bcfbfecce58d9dc97517e5738c1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e43fa207a1c3b7f8342c45b42304e42255fc0dd2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bichitos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bichitos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

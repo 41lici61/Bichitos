@@ -20,17 +20,17 @@
           <Setter Property="Background">
             <Setter.Value>
               <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#A0EFFF" Offset="0"/>
-                <GradientStop Color="#FFFFFF" Offset="0.4"/>
-                <GradientStop Color="#9FFFB8" Offset="1"/>
+                <GradientStop Color="Aqua"/>
+                <GradientStop Color= "Crimson"/>
+                <GradientStop Color="Chartreuse"/>
               </LinearGradientBrush>
             </Setter.Value>
           </Setter>
         </Style>
 
         <Style Selector="Button">
-          <Setter Property="Background" Value="#FFCCFF"/>
-          <Setter Property="Foreground" Value="Black"/>
+          <Setter Property="Background" Value="DeepPink"/>
+          <Setter Property="Foreground" Value="AliceBlue"/>
           <Setter Property="CornerRadius" Value="12"/>
           <Setter Property="FontSize" Value="16"/>
           <Setter Property="Margin" Value="4"/>
@@ -44,7 +44,7 @@
 
       <DockPanel Margin="16">
         <!-- Encabezado -->
-        <TextBlock Text="🌸 Creador de Bichitos 🌸"
+        <TextBlock Text="👾Creador de Bichitos👾 "
                    FontSize="28"
                    FontWeight="Bold"
                    Foreground="#0080FF"
@@ -58,15 +58,14 @@
                     Background="#80FFFFFF"
                     Spacing="8">
           
-          <TextBlock Text="Nombre del bichito:" FontWeight="Bold"/>
+          <TextBlock Text="Nombre del bichito:" FontWeight="Bold" Foreground="Black"/>
           <TextBox Watermark="Escribe un nombre..." />
 
-          <CheckBox Content="¿Es mágico?" />
 
-          <TextBlock Text="Fecha de aparición:" FontWeight="Bold"/>
+          <TextBlock Text="Cumpleaños:" FontWeight="Bold" Foreground="Black"/>
           <CalendarDatePicker />
 
-          <TextBlock Text="Color principal:" FontWeight="Bold"/>
+          <TextBlock Text="Color:" FontWeight="Bold" Foreground="Black"/>
           <ComboBox>
             <ComboBoxItem Content="Verde"/>
             <ComboBoxItem Content="Azul"/>
@@ -77,11 +76,17 @@
           <CheckBox Content="Opciones avanzadas" Name="ChkAvanzadas"/>
 
           <StackPanel Name="OpcionesAvanzadasPanel" IsVisible="False">
-            <TextBlock Text="Nivel de rareza:" FontWeight="Bold"/>
+            <TextBlock Text="Estado:" FontWeight="Bold"/>
             <ComboBox>
-              <ComboBoxItem Content="Común"/>
-              <ComboBoxItem Content="Raro"/>
-              <ComboBoxItem Content="Legendario"/>
+              <ComboBoxItem Content="Vivo"/>
+              <ComboBoxItem Content="Fallecido"/>
+            </ComboBox>
+            <TextBlock Text="Evolucion:" FontWeight="Bold"/>
+            <ComboBox>
+              <ComboBoxItem Content="1"/>
+              <ComboBoxItem Content="2"/>
+              <ComboBoxItem Content="3"/>
+              <ComboBoxItem Content="4"/>
             </ComboBox>
           </StackPanel>
 
@@ -90,11 +95,48 @@
                   Width="160"/>
         </StackPanel>
 
-        <ScrollViewer Margin="0,16,0,0">
-          <WrapPanel Name="ListaBichitos" 
-                     Background="#66FFFFFF"
-                     Margin="12"/>
-        </ScrollViewer>
+        <StackPanel>
+            <ComboBox ItemsSource="{Binding Bichitos}">
+                
+            </ComboBox>
+            <ListBox ItemsSource="{Binding
+            Bichitos}" SelectedItem="{Binding BichitoSeleccionado}">
+                <Interaction.Behaviors>
+                    <EventTriggerBehavior EventName="DoubleTapped">
+                        <InvokeCommandAction Command="{Binding CargarBichitoSeleccionadoCommand}">
+                                            
+                        </InvokeCommandAction>
+                    </EventTriggerBehavior>
+                                   
+                </Interaction.Behaviors>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel>
+                            <!-- es lo q hace q los elementos se reorganicen en cualquier tipo de pantalla-->
+                        </WrapPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="10" Padding="10" CornerRadius="10" 
+                                 BorderThickness="2"
+                                BoxShadow="5 5 5 5 DarkGray" >
+                            <StackPanel>
+                                
+                                <Image Source="avares://Bichitos/Assets/59d7bd0d-bd2c-42db-b1ef-5dd1b923b928_alta-libre-aspect-ratio_default_0.jpg"
+                                       Width="50">
+                                </Image>
+                                <TextBlock Text="{Binding Nombre}"
+                                           HorizontalAlignment="Center"></TextBlock>
+                                <TextBlock Text="{Binding Color}"
+                                           HorizontalAlignment="Center"></TextBlock>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                
+            </ListBox>
+        </StackPanel>
       </DockPanel>
     </UserControl>
 

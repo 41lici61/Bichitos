@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "W/7RfrGlou0=",
+  "dgSpecHash": "a1rtetR7P0k=",
   "success": true,
   "projectFilePath": "C:\\Users\\34672\\RiderProjects\\Bichitos\\Bichitos.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,8 @@
     "C:\\Users\\34672\\.nuget\\packages\\avalonia.themes.simple\\11.3.6\\avalonia.themes.simple.11.3.6.nupkg.sha512",
     "C:\\Users\\34672\\.nuget\\packages\\avalonia.win32\\11.3.6\\avalonia.win32.11.3.6.nupkg.sha512",
     "C:\\Users\\34672\\.nuget\\packages\\avalonia.x11\\11.3.6\\avalonia.x11.11.3.6.nupkg.sha512",
+    "C:\\Users\\34672\\.nuget\\packages\\avalonia.xaml.interactions\\11.3.0.6\\avalonia.xaml.interactions.11.3.0.6.nupkg.sha512",
+    "C:\\Users\\34672\\.nuget\\packages\\avalonia.xaml.interactivity\\11.3.0.6\\avalonia.xaml.interactivity.11.3.0.6.nupkg.sha512",
     "C:\\Users\\34672\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\34672\\.nuget\\packages\\harfbuzzsharp\\8.3.1.1\\harfbuzzsharp.8.3.1.1.nupkg.sha512",
     "C:\\Users\\34672\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\8.3.1.1\\harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",

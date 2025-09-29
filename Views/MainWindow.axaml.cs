@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Bichitos.Views;
 
@@ -8,4 +9,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+
+    
+
 }

@@ -63,6 +63,14 @@
               "target": "Package",
               "version": "[11.3.6, )"
             },
+            "Avalonia.Xaml.Interactions": {
+              "target": "Package",
+              "version": "[11.3.0.6, )"
+            },
+            "Avalonia.Xaml.Interactivity": {
+              "target": "Package",
+              "version": "[11.3.0.6, )"
+            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"

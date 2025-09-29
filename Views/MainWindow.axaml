@@ -16,7 +16,6 @@
     <UserControl>
     <UserControl.Styles>
       
-      <!-- Fondo con estilo "Frutiger Aero": degradado brillante -->
         <Style Selector="UserControl">
           <Setter Property="Background">
             <Setter.Value>
@@ -29,7 +28,6 @@
           </Setter>
         </Style>
 
-        <!-- Estilo infantil para botones -->
         <Style Selector="Button">
           <Setter Property="Background" Value="#FFCCFF"/>
           <Setter Property="Foreground" Value="Black"/>
@@ -38,7 +36,6 @@
           <Setter Property="Margin" Value="4"/>
         </Style>
 
-        <!-- Caja con borde brillante -->
         <Style Selector="TextBox, ComboBox, CalendarDatePicker, CheckBox">
           <Setter Property="Margin" Value="4"/>
           <Setter Property="FontSize" Value="14"/>
@@ -79,7 +76,6 @@
 
           <CheckBox Content="Opciones avanzadas" Name="ChkAvanzadas"/>
 
-          <!-- Aquí puedes ocultar/mostrar opciones avanzadas en C# -->
           <StackPanel Name="OpcionesAvanzadasPanel" IsVisible="False">
             <TextBlock Text="Nivel de rareza:" FontWeight="Bold"/>
             <ComboBox>
@@ -94,7 +90,6 @@
                   Width="160"/>
         </StackPanel>
 
-        <!-- Lista de bichitos creados -->
         <ScrollViewer Margin="0,16,0,0">
           <WrapPanel Name="ListaBichitos" 
                      Background="#66FFFFFF"

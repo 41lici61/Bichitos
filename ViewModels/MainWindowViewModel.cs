@@ -29,6 +29,7 @@ public partial class MainWindowViewModel : ViewModelBase
     public MainWindowViewModel()
     {
         CargarBichitos();
+        CargarCombo();
     }
 
     [RelayCommand]

@@ -66,12 +66,9 @@
           <CalendarDatePicker />
 
           <TextBlock Text="Color:" FontWeight="Bold" Foreground="Black"/>
-          <ComboBox>
-            <ComboBoxItem Content="Verde"/>
-            <ComboBoxItem Content="Azul"/>
-            <ComboBoxItem Content="Rosa"/>
-            <ComboBoxItem Content="Amarillo"/>
-          </ComboBox>
+          <ComboBox Width="200" ItemsSource="{Binding Lista}" 
+                    SelectedIndex="0" SelectedItem="{Binding Bichito.Color}"></ComboBox>
+
 
           <CheckBox Content="Opciones avanzadas" Name="ChkAvanzadas"/>
 

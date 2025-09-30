@@ -19,7 +19,7 @@ public partial class MainWindowViewModel : ViewModelBase
     
     [ObservableProperty] private bool avanzadas = false;
 
-    [ObservableProperty] private List<Models.Bichitos> bichitos= new();
+    [ObservableProperty] private ObservableCollection<Models.Bichitos> bichitos= new();
     
     [ObservableProperty] 
     private Models.Bichitos bichito = new Models.Bichitos();

@@ -99,7 +99,7 @@
             <ComboBox ItemsSource="{Binding Bichitos}">
                 
             </ComboBox>
-            <ListBox ItemsSource="{Binding
+            <ListBox Width="400" ItemsSource="{Binding
             Bichitos}" SelectedItem="{Binding BichitoSeleccionado}">
                 <Interaction.Behaviors>
                     <EventTriggerBehavior EventName="DoubleTapped">
@@ -119,7 +119,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Border Margin="10" Padding="10" CornerRadius="10" 
-                                 BorderThickness="2"
+                                BorderThickness="2"
                                 BoxShadow="5 5 5 5 DarkGray" >
                             <StackPanel>
                                 

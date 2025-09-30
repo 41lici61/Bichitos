@@ -90,6 +90,50 @@ public partial class MainWindowViewModel : ViewModelBase
         };
         Bichito.Color = Lista[0];
     }
+    
+    [RelayCommand]
+    public void EstadoInicialCheck(Object parameter)//cambia el color de las letras del check segun su estado
+    {
+        CheckBox check = (CheckBox)parameter;
+        if (check.IsChecked == true)
+        {
+            check.Foreground=Brushes.DeepPink;
+            check.FontWeight = FontWeight.Normal;
+        }else{
+            check.Foreground=Brushes.CadetBlue;
+            check.FontWeight = FontWeight.Normal;
+        }
+    }
+    
+    [RelayCommand]
+    public void MostrarBichito()
+    {
+        if (!CheckDate())
+        {
+            return;
+        }
+
+        Mensaje = "Nombre: " + Bichito.Nombre + ", Color: " + Bichito.Color + ", Cumpleaños: " + Bichito.Cumple + ", Evolucion: " + Bichito.evolucion;
+        Console.WriteLine(Mensaje);
+        Bichitos.Add(Bichito);
+        Bichito = new Models.Bichitos();//para borrar los campos, para ello el modelo debe ser observable
+        
+
+    }
+    
+    [RelayCommand]
+    public void MostrarOpcionesAvanzadas()
+    {
+        if (Avanzadas)
+        {
+            Avanzadas = false;
+        }
+        else
+        {
+            Avanzadas = true;
+        }
+    }
+    
 
 }
 

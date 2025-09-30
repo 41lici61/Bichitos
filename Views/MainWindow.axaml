@@ -58,27 +58,34 @@
                     Background="#80FFFFFF"
                     Spacing="8">
           
-          <TextBlock Text="Nombre del bichito:" FontWeight="Bold" Foreground="Black"/>
+          <TextBox Text="{Binding Bichito.Nombre}" FontWeight="Bold" Foreground="Black"/>
           <TextBox Watermark="Escribe un nombre..." />
 
 
-          <TextBlock Text="Cumpleaños:" FontWeight="Bold" Foreground="Black"/>
+          <CalendarDatePicker SelectedDate="{Binding Bichito.Cumple}" FontWeight="Bold" Foreground="Black"/>
+              <Interaction.Behaviors>
+                  <EventTriggerBehavior> <!--cuando pasa el evento, se llama a un comando -->
+                      <InvokeCommandAction Command="{Binding ComprobarCumpleCommand}">
+                          <!--comando al q se llama-->
+                      </InvokeCommandAction>
+                  </EventTriggerBehavior>
+              </Interaction.Behaviors>
           <CalendarDatePicker />
 
-          <TextBlock Text="Color:" FontWeight="Bold" Foreground="Black"/>
+          <TextBlock Text="{Binding Bichito.Color}" FontWeight="Bold" Foreground="Black"/>
           <ComboBox Width="200" ItemsSource="{Binding Lista}" 
                     SelectedIndex="0" SelectedItem="{Binding Bichito.Color}"></ComboBox>
 
 
-          <CheckBox Content="Opciones avanzadas" Name="ChkAvanzadas"/>
+          <CheckBox Content="Opciones avanzadas" Name="ChkAvanzadas" Command="{Binding MostrarOpcionesAvanzadasCommand}"/>
 
-          <StackPanel Name="OpcionesAvanzadasPanel" IsVisible="False">
-            <TextBlock Text="Estado:" FontWeight="Bold"/>
+          <StackPanel Name="OpcionesAvanzadasPanel" IsVisible="{Binding Avanzadas}">
+            <TextBlock Text="{Binding Bichito.Estado}" FontWeight="Bold"/>
             <ComboBox>
               <ComboBoxItem Content="Vivo"/>
               <ComboBoxItem Content="Fallecido"/>
             </ComboBox>
-            <TextBlock Text="Evolucion:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Bichito.evolucion}" FontWeight="Bold"/>
             <ComboBox>
               <ComboBoxItem Content="1"/>
               <ComboBoxItem Content="2"/>
@@ -86,8 +93,8 @@
               <ComboBoxItem Content="4"/>
             </ComboBox>
           </StackPanel>
-
-          <Button Content="✨ Crear bichito ✨"
+          <TextBlock Text="{Binding  Path=Mensaje}" Foreground="Crimson" Margin="10" HorizontalAlignment="Center"></TextBlock>
+          <Button Content="✨ Crear bichito ✨" Command="{Binding MostrarBichitoCommand}"
                   HorizontalAlignment="Center"
                   Width="160"/>
         </StackPanel>

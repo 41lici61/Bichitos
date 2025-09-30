@@ -58,11 +58,10 @@
                     Background="#80FFFFFF"
                     Spacing="8">
           
-          <TextBox Text="{Binding Bichito.Nombre}" FontWeight="Bold" Foreground="Black"/>
-          <TextBox Watermark="Escribe un nombre..." />
+          <TextBox Watermark="Nombre del bichito" Text="{Binding Bichito.Nombre}" FontWeight="Bold" Foreground="white"/>
 
 
-          <CalendarDatePicker SelectedDate="{Binding Bichito.Cumple}" FontWeight="Bold" Foreground="Black"/>
+          <CalendarDatePicker SelectedDate="{Binding Bichito.Cumple}" FontWeight="Bold" Foreground="Black">
               <Interaction.Behaviors>
                   <EventTriggerBehavior> <!--cuando pasa el evento, se llama a un comando -->
                       <InvokeCommandAction Command="{Binding ComprobarCumpleCommand}">
@@ -70,7 +69,7 @@
                       </InvokeCommandAction>
                   </EventTriggerBehavior>
               </Interaction.Behaviors>
-          <CalendarDatePicker />
+          </CalendarDatePicker>
 
           <TextBlock Text="{Binding Bichito.Color}" FontWeight="Bold" Foreground="Black"/>
           <ComboBox Width="200" ItemsSource="{Binding Lista}" 
@@ -80,17 +79,14 @@
           <CheckBox Content="Opciones avanzadas" Name="ChkAvanzadas" Command="{Binding MostrarOpcionesAvanzadasCommand}"/>
 
           <StackPanel Name="OpcionesAvanzadasPanel" IsVisible="{Binding Avanzadas}">
-            <TextBlock Text="{Binding Bichito.Estado}" FontWeight="Bold"/>
-            <ComboBox>
-              <ComboBoxItem Content="Vivo"/>
-              <ComboBoxItem Content="Fallecido"/>
+            <TextBlock Text="¿Vivo?" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding ListaEstado}"
+                      SelectedIndex="0" SelectedItem="{Binding Bichito.Estado}"
+                      >
             </ComboBox>
-            <TextBlock Text="{Binding Bichito.evolucion}" FontWeight="Bold"/>
-            <ComboBox>
-              <ComboBoxItem Content="1"/>
-              <ComboBoxItem Content="2"/>
-              <ComboBoxItem Content="3"/>
-              <ComboBoxItem Content="4"/>
+            <TextBlock Text="Evolución" FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding ListaEvoluciones}" SelectedIndex="0" 
+                      SelectedItem="{Binding Bichito.evolucion}">
             </ComboBox>
           </StackPanel>
           <TextBlock Text="{Binding  Path=Mensaje}" Foreground="Crimson" Margin="10" HorizontalAlignment="Center"></TextBlock>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Avalonia.Animation;
 using Avalonia.Controls;
 using Avalonia.Media;
 using Bichitos.Models;
@@ -14,7 +15,7 @@ public partial class MainWindowViewModel : ViewModelBase
 {
     //decorador, privado, minuscula, sin get ni set (el observavbleproperty los implementa automaticamnete)
     [ObservableProperty]
-    private string mensaje = string.Empty;
+    private string mensaje = "";
     
     [ObservableProperty] private bool avanzadas = false;
 
@@ -40,14 +41,14 @@ public partial class MainWindowViewModel : ViewModelBase
     
     private bool CheckDate()
     {
-        if (bichito.Cumple > DateTime.Today)
+        if (Bichito.Cumple > DateTime.Today)
         {
-            mensaje = "¿Aún no ha nacido?";
+            Mensaje = "¿Aún no ha nacido?";
             return false;
         }
         else
         {
-            mensaje = "";
+            Mensaje = "";
             return true;
         }
     }
@@ -60,7 +61,7 @@ public partial class MainWindowViewModel : ViewModelBase
         bichito.Cumple = Convert.ToDateTime("10/12/2003");
         bichito.Estado = true;
         bichito.evolucion = 4;
-        bichitos.Add(bichito);
+        Bichitos.Add(bichito);
         
         Models.Bichitos bichito2 = new Models.Bichitos();
         bichito2.Nombre = "Daniel";
@@ -68,7 +69,7 @@ public partial class MainWindowViewModel : ViewModelBase
         bichito2.Cumple = DateTime.Today;
         bichito.Estado = true;
         bichito.evolucion = 1;
-        bichitos.Add(bichito2);
+        Bichitos.Add(bichito2);
     }
 
     [RelayCommand]
@@ -79,16 +80,38 @@ public partial class MainWindowViewModel : ViewModelBase
     
     public ObservableCollection<string> Lista { set; get; } = new()
     {
-        "Rosa", "Fucsia", "Perla", "topacio", "Rojo", "Marrón", "Negro"
+        "Rosa", "Fucsia", "Perla", "Topacio", "Rojo", "Marrón", "Negro"
+    };
+    
+    public ObservableCollection<int> ListaEvoluciones { set; get; } = new()
+    {
+        1,2,3,4
+    };
+    
+    public ObservableCollection<bool> ListaEstado { set; get; } = new()
+    {
+        true, false
     };
     
     private void CargarCombo()
     {
         Lista = new ObservableCollection<string>()
         {
-            "Rosa", "Fucsia", "Perla", "topacio", "Rojo", "Marrón", "Negro"
+            "Rosa", "Fucsia", "Perla", "Topacio", "Rojo", "Marrón", "Negro"
         };
         Bichito.Color = Lista[0];
+
+        ListaEstado = new ObservableCollection<bool>()
+        {
+            true, false
+        };
+        Bichito.Estado = ListaEstado[0];
+
+        ListaEvoluciones = new ObservableCollection<int>()
+        {
+            1,2,3,4
+        };
+        Bichito.evolucion = ListaEvoluciones[0];
     }
     
     [RelayCommand]

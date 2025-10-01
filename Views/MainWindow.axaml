@@ -77,7 +77,7 @@
                     SelectedIndex="0" SelectedItem="{Binding Bichito.Color}"></ComboBox>
 
 
-          <CheckBox Content="Opciones avanzadas" Name="ChkAvanzadas" Command="{Binding MostrarOpcionesAvanzadasCommand}"/>
+          <CheckBox FontWeight="Bold" Content="Opciones avanzadas" Foreground="DeepPink" Name="ChkAvanzadas" Command="{Binding MostrarOpcionesAvanzadasCommand}"/>
 
           <StackPanel Name="OpcionesAvanzadasPanel" IsVisible="{Binding Avanzadas}">
             <TextBlock Text="💀¿Vivo?" Foreground="DeepPink" FontWeight="Bold"/>
@@ -90,10 +90,16 @@
                       SelectedItem="{Binding Bichito.evolucion}">
             </ComboBox>
           </StackPanel>
+          
+          <CheckBox FontWeight="Bold" Foreground="Red" Content="Estoy de acuerdo con donar 5 euros a Alicia"
+                    Name="Alicia" IsChecked="False" Command="{Binding EstadoInicialCheckCommand}"
+                    CommandParameter="{Binding ElementName=Alicia}"></CheckBox>
+          
           <TextBlock Text="{Binding  Path=Mensaje}" Foreground="Crimson" Margin="1" HorizontalAlignment="Center"></TextBlock>
           <Button Content="✨ Crear bichito ✨" Command="{Binding MostrarBichitoCommand}"
                   HorizontalAlignment="Center"
-                  Width="170"/>
+                  Width="170"
+                  CommandParameter="{Binding ElementName=Alicia}"/>
         </StackPanel>
 
         <StackPanel Background="#80FFFFFF"

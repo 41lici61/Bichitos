@@ -120,17 +120,27 @@ public partial class MainWindowViewModel : ViewModelBase
         CheckBox check = (CheckBox)parameter;
         if (check.IsChecked == true)
         {
-            check.Foreground=Brushes.DeepPink;
+            check.Foreground=Brushes.Blue;
             check.FontWeight = FontWeight.Normal;
         }else{
-            check.Foreground=Brushes.CadetBlue;
-            check.FontWeight = FontWeight.Normal;
+            check.Foreground=Brushes.Red;
+            check.FontWeight = FontWeight.Bold;
         }
     }
     
+    
+    
     [RelayCommand]
-    public void MostrarBichito()
+    public void MostrarBichito(Object parameter)
     {
+        CheckBox check = (CheckBox)parameter;
+        if (check.IsChecked == false)
+        {
+            Mensaje = "DONA PORFA";
+            Console.WriteLine(Mensaje);
+            return;
+        }
+
         if (!CheckDate())
         {
             return;
@@ -156,6 +166,8 @@ public partial class MainWindowViewModel : ViewModelBase
             Avanzadas = true;
         }
     }
+    
+   
     
 
 }

@@ -18,6 +18,8 @@ build_property.RootNamespace = Bichitos
 build_property.ProjectDir = C:\Users\34672\RiderProjects\Bichitos\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
 [C:/Users/34672/RiderProjects/Bichitos/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

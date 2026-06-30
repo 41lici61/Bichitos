@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Bichitos</string>
+
+    <!-- Home Activity Strings -->
+    <string name="pet_name_display">🐾 %1$s</string>
+    <string name="pet_info_display">
+Gender: %1$s
+❤️ Happiness: %2$d
+🍽️ Hunger: %3$d
+⭐ Care Points: %4$d
+💔 Neglect Points: %5$d</string>
+
+    <!-- Otros strings que ya tenías -->
+    <string name="tap_message_warm">The egg feels warm!</string>
+    <string name="tap_message_movement">You feel movement inside!</string>
+    <string name="tap_message_almost">Almost ready!</string>
+    <string name="tap_message_cracking">The shell is cracking!</string>
+    <string name="tap_message_about_to_hatch">About to hatch!</string>
+    <string name="rub_message">The egg feels cozy!</string>
+
+    <string-array name="egg_messages">
+        <item>The egg moves slightly</item>
+        <item>Can you hear something inside?</item>
+        <item>It\'s very warm!</item>
+        <item>Maybe it wants to come out</item>
+        <item>It feels happy!</item>
+        <item>The egg is glowing</item>
+        <item>Something is moving inside!</item>
+        <item>It\'s getting ready</item>
+    </string-array>
+</resources>

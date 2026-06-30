@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/egg_background">
+
+    <!-- Frutiger Aero Background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/frutiger_aero_bg"
+        android:scaleType="centerCrop"
+        android:alpha="0.7"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BICHITOS"
+        android:textSize="48sp"
+        android:textColor="#FF69B4"
+        android:fontFamily="@font/pixel_font"
+        android:shadowColor="#FF1493"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Egg GIF -->
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/eggGif"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:src="@drawable/egg_normal"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Time remaining -->
+    <TextView
+        android:id="@+id/timeLeftText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05:00"
+        android:textSize="36sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/pixel_font"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        app:layout_constraintTop_toBottomOf="@id/eggGif"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Touch or rub the egg!"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/pixel_font"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        app:layout_constraintTop_toBottomOf="@id/timeLeftText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/rubButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="RUB"
+        android:backgroundTint="#FF69B4"
+        android:fontFamily="@font/pixel_font"
+        android:textSize="18sp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="40dp"/>
+
+    <Button
+        android:id="@+id/tapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="TAP"
+        android:backgroundTint="#4FC3F7"
+        android:fontFamily="@font/pixel_font"
+        android:textSize="18sp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="@drawable/frutiger_aero_bg">
+
+    <TextView
+        android:id="@+id/petNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🐾 Bichito"
+        android:textSize="36sp"
+        android:textColor="#FF69B4"
+        android:fontFamily="@font/pixel_font"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/pet_icon"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:id="@+id/petInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info de la mascota"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/pixel_font"
+        android:gravity="center"
+        android:background="#88000000"
+        android:padding="20dp"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Cuidar!"
+        android:fontFamily="@font/pixel_font"
+        android:backgroundTint="#FF69B4"
+        android:padding="15dp"/>
+
+</LinearLayout>

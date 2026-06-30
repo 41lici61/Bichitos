@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Bichitos" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#FF69B4</item>
+        <item name="colorPrimaryVariant">#FF1493</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">@drawable/frutiger_aero_bg</item>
+        <item name="android:statusBarColor">#FF69B4</item>
+        <item name="android:navigationBarColor">#FF69B4</item>
+    </style>
+
+    <style name="CuteDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:fontFamily">@font/pixel_font</item>
+        <item name="colorPrimary">#FF69B4</item>
+        <item name="colorAccent">#FF69B4</item>
+    </style>
+</resources>

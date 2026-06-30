@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <!-- Icono del bebé -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/baby_icon"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Texto del género -->
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎉 It's a boy!"
+        android:textSize="28sp"
+        android:textColor="#FF69B4"
+        android:fontFamily="@font/pixel_font"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Input para el nombre -->
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name your bichito"
+        android:fontFamily="@font/pixel_font"
+        android:maxLength="15"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="textPersonName"/>
+
+</LinearLayout>

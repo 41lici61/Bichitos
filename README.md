@@ -15,8 +15,3 @@ Java · Android SDK · SharedPreferences · Gson
 ## Status
 
 🚧 In development
-
-## Install
-
-```bash
-git clone https://github.com/yourusername/Bichitos.git

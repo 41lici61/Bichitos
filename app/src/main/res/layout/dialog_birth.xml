@@ -6,27 +6,27 @@
     android:padding="20dp"
     android:background="#FFFFFF">
 
-    <!-- Icono del bebé -->
+    <!-- Baby Icon -->
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:src="@drawable/baby_icon"
         android:layout_gravity="center"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="8dp"/>
 
-    <!-- Texto del género -->
+    <!-- Gender Text -->
     <TextView
         android:id="@+id/genderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="🎉 It's a boy!"
-        android:textSize="28sp"
+        android:textSize="22sp"
         android:textColor="#FF69B4"
         android:fontFamily="@font/pixel_font"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="16dp"/>
 
-    <!-- Input para el nombre -->
+    <!-- Name Input -->
     <EditText
         android:id="@+id/nameInput"
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
         android:fontFamily="@font/pixel_font"
         android:maxLength="15"
         android:padding="12dp"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:background="@android:drawable/editbox_background"
         android:inputType="textPersonName"/>
 

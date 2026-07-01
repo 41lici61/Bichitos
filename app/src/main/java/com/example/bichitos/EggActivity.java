@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -65,9 +64,8 @@ public class EggActivity extends AppCompatActivity {
             }
         }
 
-        // if new player
+        // if new player - REMOVED landscape forcing
         setContentView(R.layout.activity_egg);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         initViews();
         //initSounds();
@@ -76,6 +74,8 @@ public class EggActivity extends AppCompatActivity {
         startHatchTimer();
         playBackgroundMusic();
     }
+
+    // ... El resto del código queda IGUAL ...
 
     private void initViews() {
         eggGif = findViewById(R.id.eggGif);
@@ -150,8 +150,14 @@ public class EggActivity extends AppCompatActivity {
         updateTimeDisplay();
         savePetData();
 
+        if (hatchTimer != null) {
+            hatchTimer.cancel();
+        }
+
         if (hatchTimeLeft <= 0) {
             startHatching();
+        } else {
+            startHatchTimer();
         }
     }
 

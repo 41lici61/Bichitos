@@ -40,6 +40,7 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.preference:preference:1.2.0")
+    implementation(libs.activity.ktx)
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
     implementation("com.google.code.gson:gson:2.10.1")
 

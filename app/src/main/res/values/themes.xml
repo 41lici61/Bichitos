@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.Bichitos" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">#FF69B4</item>
-        <item name="colorPrimaryVariant">#FF1493</item>
+        <item name="colorPrimary">#1B4FBF</item>
+        <item name="colorPrimaryVariant">#0D2E7A</item>
         <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="android:windowBackground">@drawable/frutiger_aero_bg</item>
-        <item name="android:statusBarColor">#FF69B4</item>
-        <item name="android:navigationBarColor">#FF69B4</item>
+
+        <item name="colorSecondary">#A8F0C6</item>
+        <item name="colorSecondaryVariant">#7ED9A8</item>
+        <item name="colorOnSecondary">#1B4FBF</item>
+
+        <item name="colorTertiary">#FFD93D</item>
+        <item name="colorOnTertiary">#1B4FBF</item>
+
+        <item name="android:statusBarColor">#1B4FBF</item>
+        <item name="android:navigationBarColor">#1B4FBF</item>
+
+        <item name="android:colorAccent">#FFD93D</item>
+        <item name="android:textColorPrimary">#1B4FBF</item>
+        <item name="android:textColorSecondary">#4A6FA5</item>
     </style>
 
     <style name="CuteDialogTheme" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:windowBackground">@drawable/dialog_background</item>
         <item name="android:fontFamily">@font/pixel_font</item>
-        <item name="colorPrimary">#FF69B4</item>
-        <item name="colorAccent">#FF69B4</item>
+        <item name="colorPrimary">#1B4FBF</item>
+        <item name="colorAccent">#FFD93D</item>
+        <item name="android:textColorPrimary">#1B4FBF</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
     </style>
 </resources>

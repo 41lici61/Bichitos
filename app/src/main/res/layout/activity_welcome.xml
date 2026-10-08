@@ -143,4 +143,19 @@
             app:layout_constraintVertical_bias="0.76" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/videoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:background="#000000">
+
+        <VideoView
+            android:id="@+id/introVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </FrameLayout>
 </FrameLayout>

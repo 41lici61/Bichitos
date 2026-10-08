@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/egg_background">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/frutiger_aero_bg"
-        android:scaleType="centerCrop"
-        android:alpha="0.7"/>
-
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"

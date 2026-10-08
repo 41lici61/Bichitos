@@ -2,11 +2,15 @@ package com.example.bichitos;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
     private ImageView musicButton;
     private GifImageView musicAnim;
     private boolean languajeSelected=false;
+    private VideoView introVideo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +53,7 @@ public class WelcomeActivity extends AppCompatActivity {
             finish();
         }
 
+        introVideo=findViewById(R.id.introVideo);
         eggImage=findViewById(R.id.eggImage);
         englishEggImage=findViewById(R.id.englishEggImage);
         spanishEggImage=findViewById(R.id.spanishEggImage);
@@ -83,14 +89,45 @@ public class WelcomeActivity extends AppCompatActivity {
         }, gifDrawable.getDuration());
     }
 
-    public void clickOK(View view){
-        if(languajeSelected){
+    public void clickOK(View view) {
+        if (!languajeSelected) {
+            Toast.makeText(this, "Select a language", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        FrameLayout videoContainer = findViewById(R.id.videoContainer);
+        videoContainer.setVisibility(View.VISIBLE);
+
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.transition;
+        introVideo.setVideoURI(Uri.parse(path));
+
+        introVideo.setOnPreparedListener(mp -> {
+            int videoWidth = mp.getVideoWidth();
+            int videoHeight = mp.getVideoHeight();
+            float videoRatio = (float) videoWidth / videoHeight;
+
+            int containerWidth = videoContainer.getWidth();
+            int containerHeight = videoContainer.getHeight();
+            float containerRatio = (float) containerWidth / containerHeight;
+
+            ViewGroup.LayoutParams params = introVideo.getLayoutParams();
+
+            if (videoRatio > containerRatio) {
+                params.height = containerHeight;
+                params.width = (int) (containerHeight * videoRatio);
+            } else {
+                params.width = containerWidth;
+                params.height = (int) (containerWidth / videoRatio);
+            }
+
+            introVideo.setLayoutParams(params);
+            introVideo.start();
+        });
+
+        introVideo.setOnCompletionListener(mp -> {
             Intent intent = new Intent(this, EggActivity.class);
             startActivity(intent);
             finish();
-        }else{
-            Toast.makeText(this, "Select a language", Toast.LENGTH_SHORT).show();
-        }
-
+        });
     }
 }

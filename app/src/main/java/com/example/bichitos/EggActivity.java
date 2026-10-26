@@ -69,13 +69,13 @@ public class EggActivity extends AppCompatActivity {
 
         initViews();
         //initSounds();
-        loadPetData(); // load data
+        loadPetData();
         setupButtons();
         startHatchTimer();
         playBackgroundMusic();
+        getWindow().setBackgroundDrawableResource(R.drawable.egg_background);
     }
 
-    // ... El resto del código queda IGUAL ...
 
     private void initViews() {
         eggGif = findViewById(R.id.eggGif);
@@ -228,7 +228,6 @@ public class EggActivity extends AppCompatActivity {
                     petData.setName(name);
                     savePetData();
 
-                    // Go to Home
                     startActivity(new Intent(this, HomeActivity.class));
                     finish();
                 })

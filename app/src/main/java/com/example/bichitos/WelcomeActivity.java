@@ -127,6 +127,7 @@ public class WelcomeActivity extends AppCompatActivity {
         introVideo.setOnCompletionListener(mp -> {
             Intent intent = new Intent(this, EggActivity.class);
             startActivity(intent);
+            overridePendingTransition(0, 0);// fluid Transition
             finish();
         });
     }
